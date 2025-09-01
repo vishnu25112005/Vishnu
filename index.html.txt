@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>S. Vishnu Varathan — Portfolio</title>
+  <meta name="description" content="Portfolio of S. Vishnu Varathan — BCA 2nd year" />
+
+  <!-- Simple modern styling -->
+  <style>
+    :root{
+      --bg:#0f1724;      /* dark navy */
+      --card:#0b1220;
+      --accent:#06b6d4;  /* teal */
+      --muted:#9aa6b2;
+      --text:#e6eef5;
+      --radius:12px;
+      --maxwidth:1000px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: linear-gradient(180deg, #071022 0%, #081226 60%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      justify-content:center;
+      padding:36px 18px;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--maxwidth);
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:16px;
+      padding:28px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+    }
+
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      margin-bottom:20px;
+    }
+
+    .avatar{
+      width:100px;
+      height:100px;
+      border-radius:12px;
+      background:linear-gradient(135deg, rgba(6,182,212,0.15), rgba(255,255,255,0.02));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:28px;
+      color:var(--accent);
+      border:1px solid rgba(255,255,255,0.03);
+      flex-shrink:0;
+    }
+
+    h1{
+      margin:0;
+      font-size:22px;
+      letter-spacing:0.2px;
+    }
+
+    .sub{
+      color:var(--muted);
+      margin-top:6px;
+      font-size:14px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:20px;
+      align-items:start;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:18px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+
+    .about p{ margin:0 0 12px 0; color:var(--muted); line-height:1.55; }
+
+    .info-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:8px;
+    }
+
+    .info-list li{
+      display:flex;
+      justify-content:space-between;
+      font-size:14px;
+      color:var(--muted);
+    }
+    .info-list li strong{ color:var(--text); font-weight:600; }
+
+    h2{
+      margin:0 0 12px 0;
+      font-size:16px;
+    }
+
+    .skills{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    .skill{
+      padding:6px 10px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+      border-radius:999px;
+      font-size:13px;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,0.02);
+    }
+
+    .projects .proj{
+      border-radius:10px;
+      padding:12px;
+      margin-bottom:10px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.012), rgba(255,255,255,0.004));
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .proj h3{ margin:0 0 6px 0; font-size:14px; }
+    .proj p{ margin:0; color:var(--muted); font-size:13px; }
+
+    .contact-row{
+      display:flex;
+      gap:8px;
+      margin-top:10px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      color:var(--bg);
+      background:var(--accent);
+      font-weight:600;
+      font-size:14px;
+    }
+
+    footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+    }
+
+    /* Responsive */
+    @media (max-width:880px){
+      .grid{ grid-template-columns: 1fr; }
+      .avatar{ width:84px; height:84px; font-size:24px; }
+      .container{ padding:18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <header>
+      <div class="avatar" aria-hidden="true">SV</div>
+      <div>
+        <h1>S. Vishnu Varathan</h1>
+        <div class="sub">Age 18 • BCA — 2nd Year</div>
+      </div>
+      <div style="margin-left:auto; display:flex; gap:8px; align-items:center;">
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Left column: About & Projects -->
+      <section>
+        <div class="card about" aria-labelledby="about-heading">
+          <h2 id="about-heading">About Me</h2>
+          <p>Hi — I'm <strong>S. Vishnu Varathan</strong>, an 18-year-old currently pursuing my 2nd year of BCA. I enjoy building web projects, learning programming, and creating simple, clean user experiences. This portfolio showcases a few of my projects and the skills I'm developing during my studies.</p>
+
+          <h2>Skills</h2>
+          <div class="skills" role="list">
+            <span class="skill" role="listitem">HTML</span>
+            <span class="skill" role="listitem">CSS</span>
+            <span class="skill" role="listitem">JavaScript</span>
+            <span class="skill" role="listitem">Responsive Design</span>
+            <span class="skill" role="listitem">Git</span>
+          </div>
+        </div>
+
+        <div class="card projects" style="margin-top:16px;" aria-labelledby="projects-heading">
+          <h2 id="projects-heading">Projects</h2>
+
+          <article class="proj" aria-labelledby="p1">
+            <h3 id="p1">Portfolio Website (this one)</h3>
+            <p>A simple responsive single-file portfolio created with plain HTML, CSS and a bit of JavaScript. Good for learning and sharing.</p>
+          </article>
+
+          <article class="proj" aria-labelledby="p2">
+            <h3 id="p2">Sample Web App</h3>
+            <p>A small CRUD-style web app built during coursework (replace this with your actual project details).</p>
+          </article>
+
+          <p style="color:var(--muted); font-size:13px; margin-top:8px;">Tip: Replace the project descriptions with real links and screenshots when you have them.</p>
+        </div>
+      </section>
+
+      <!-- Right column: Quick info & Contact -->
+      <aside>
+        <div class="card" aria-labelledby="info-heading">
+          <h2 id="info-heading">Quick Info</h2>
+          <ul class="info-list">
+            <li><span><strong>Name</strong></span><span>S. Vishnu Varathan</span></li>
+            <li><span><strong>Age</strong></span><span>18</span></li>
+            <li><span><strong>Education</strong></span><span>2nd Year — BCA</span></li>
+            <li><span><strong>Location</strong></span><span>India</span></li>
+          </ul>
+
+          <h2 style="margin-top:14px;">Contact</h2>
+          <p style="color:var(--muted); font-size:13px; margin:0;">You can add your email or social links below. The button opens an email composer.</p>
+
+          <div class="contact-row">
+            <!-- Replace the mailto: address with your real email -->
+            <a class="btn" href="mailto:your.email@example.com?subject=Hi%20Vishnu">Email Me</a>
+            <a class="btn" href="#" style="background:transparent; color:var(--text); border:1px solid rgba(255,255,255,0.06)">Download CV</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px;" aria-labelledby="goals-heading">
+          <h2 id="goals-heading">Goals</h2>
+          <p style="color:var(--muted); margin:0;">Learn advanced web development, build real-world projects, and prepare for internships.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <small>Made by S. Vishnu Varathan — BCA 2nd Year · <span style="color:var(--muted)">Last updated: <span id="js-date">—</span></span></small>
+    </footer>
+  </main>
+
+  <!-- Tiny JS for date (optional) -->
+  <script>
+    // Shows today's date in footer; you can remove if you prefer static text.
+    (function(){
+      const d = new Date();
+      const opts = { year: 'numeric', month: 'short', day: 'numeric' };
+      document.getElementById('js-date').textContent = d.toLocaleDateString(undefined, opts);
+    })();
+  </script>
+</body>
+</html>
